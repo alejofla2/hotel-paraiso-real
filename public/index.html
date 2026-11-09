@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="Descubre las habitaciones, características, opciones de alimentación y experiencias del Hotel Paraíso Real. Consulta disponibilidad y planea tu estadía.">
+  <title>Hotel Paraíso Real | Hotel Boutique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=capacity-room-filter-20261109-1">
+  <script src="/app.js?v=capacity-room-filter-20261109-1" defer></script>
+</head>
+<body>
+  <main id="landing-screen" class="landing-screen">
+    <header class="site-header">
+      <a class="brand site-brand" href="#inicio" aria-label="Hotel Paraíso Real, inicio">
+        <img class="brand-logo" src="/images/hotel-paraiso-logo.png" alt="">
+        <span class="brand-wordmark">REAL<small>HOTEL BOUTIQUE</small></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#habitaciones">Habitaciones</a>
+        <a href="#experiencias">Experiencias</a>
+        <a href="#estancia">Tu estadía</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="header-login" type="button" data-action="show-login">Área administrativa <span>↗</span></button>
+    </header>
+
+    <section id="inicio" class="landing-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">UN LUGAR PARA VOLVER A TI</p>
+        <h1>El descanso que<br>te mereces.</h1>
+        <p>Momentos especiales, espacios acogedores y la calidez de sentirte como en casa.</p>
+        <a class="hero-link" href="#experiencias">Descubre Paraíso Real <span>↓</span></a>
+      </div>
+      <div class="hero-caption"><span class="caption-line"></span> HOTEL PARAÍSO REAL · HOSPITALIDAD CON ENCANTO</div>
+    </section>
+
+    <section id="reservar" class="booking-section" aria-labelledby="booking-title">
+      <div class="booking-heading">
+        <span class="booking-icon">✳</span>
+        <div><p class="eyebrow">TU ESTADÍA COMIENZA AQUÍ</p><h2 id="booking-title">Encuentra tu habitación</h2></div>
+      </div>
+      <form id="availability-form" class="availability-form">
+        <label><span>Entrada</span><input id="arrival-date" type="date" required></label>
+        <label><span>Salida</span><input id="departure-date" type="date" required></label>
+        <label><span>Huéspedes</span><select id="guest-count"><option value="1">1 huésped</option><option value="2" selected>2 huéspedes</option><option value="3">3 huéspedes</option><option value="4">4 huéspedes</option><option value="5">5 huéspedes</option><option value="6">6 huéspedes</option></select></label>
+        <button class="button button-gold" type="submit">Buscar habitación <span>→</span></button>
+      </form>
+      <p id="availability-error" class="error-message" role="alert"></p>
+    </section>
+
+    <section id="habitaciones" class="room-types-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">DESCANSO A TU MEDIDA</p><h2>Un espacio para cada viaje</h2></div>
+        <p>Elige la habitación que mejor acompaña tu visita. Consulta disponibilidad y tarifas para tus fechas.</p>
+      </div>
+      <p id="room-types-empty" class="room-types-empty" role="status" hidden></p>
+      <div class="room-types-grid">
+        <article class="room-type-card">
+          <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Interior acogedor de una habitación sencilla" loading="lazy">
+          <div><span class="room-type-index">01 · PARA TI</span><h3>Sencilla</h3><p>Un rincón tranquilo para descansar y disfrutar de tu propio ritmo.</p><span class="room-type-availability" data-room-type-availability="Sencilla">Consulta disponibilidad al elegir fechas</span><button class="room-type-action" type="button" data-room-type="Sencilla">Ver habitación y fotos <span>→</span></button></div>
+        </article>
+        <article class="room-type-card">
+          <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Habitación doble preparada para compartir" loading="lazy">
+          <div><span class="room-type-index">02 · PARA COMPARTIR</span><h3>Doble</h3><p>Comodidad y calidez para una escapada en buena compañía.</p><span class="room-type-availability" data-room-type-availability="Doble">Consulta disponibilidad al elegir fechas</span><button class="room-type-action" type="button" data-room-type="Doble">Ver habitación y fotos <span>→</span></button></div>
+        </article>
+        <article class="room-type-card">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Habitación familiar amplia y luminosa" loading="lazy">
+          <div><span class="room-type-index">03 · PARA DISFRUTAR JUNTOS</span><h3>Familiar</h3><p>Más espacio para reunirse y crear recuerdos durante el viaje.</p><span class="room-type-availability" data-room-type-availability="Familiar">Consulta disponibilidad al elegir fechas</span><button class="room-type-action" type="button" data-room-type="Familiar">Ver habitación y fotos <span>→</span></button></div>
+        </article>
+        <article class="room-type-card">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Suite elegante con detalles de descanso" loading="lazy">
+          <div><span class="room-type-index">04 · PARA CONSENTIRTE</span><h3>Suite</h3><p>Un ambiente especial para regalarte una estadía diferente.</p><span class="room-type-availability" data-room-type-availability="Suite">Consulta disponibilidad al elegir fechas</span><button class="room-type-action" type="button" data-room-type="Suite">Ver habitación y fotos <span>→</span></button></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experiencias" class="experience-section">
+      <div class="experience-image"></div>
+      <div class="experience-copy"><p class="eyebrow">PEQUEÑOS DETALLES, GRANDES RECUERDOS</p><h2>Una estadía que se siente diferente.</h2><p>En Paraíso Real encuentras un ambiente acogedor, habitaciones para distintas formas de viajar y opciones de alimentación para elegir cómo disfrutar tu visita.</p><a href="#estancia" class="text-link">Conoce tu estadía <span>→</span></a></div>
+    </section>
+
+    <section id="nosotros" class="promise-strip">
+      <div><span class="promise-icon">✧</span><strong>Descanso auténtico</strong><p>Ambientes tranquilos y confortables.</p></div>
+      <div><span class="promise-icon">♡</span><strong>Atención cercana</strong><p>Estamos aquí para hacerte sentir bienvenido.</p></div>
+      <div><span class="promise-icon">⌂</span><strong>Para cada viaje</strong><p>Opciones para escapadas, familias y celebraciones.</p></div>
+    </section>
+
+    <section id="estancia" class="stay-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">SENCILLO DESDE EL PRIMER MOMENTO</p><h2>Así comienza tu estadía</h2></div>
+        <p>Planea tu visita en pocos pasos y deja que nosotros revisemos tu solicitud.</p>
+      </div>
+      <div class="stay-steps">
+        <article><span>01</span><div><h3>Elige tus fechas</h3><p>Indica entrada, salida y cuántas personas viajarán contigo.</p></div></article>
+        <article><span>02</span><div><h3>Encuentra tu habitación</h3><p>Revisa las opciones disponibles y selecciona el plan de alimentación.</p></div></article>
+        <article><span>03</span><div><h3>Envía tu solicitud</h3><p>El hotel revisará la reserva y, al confirmarla, recibirás los detalles por correo.</p></div></article>
+      </div>
+    </section>
+
+    <section class="dining-section">
+      <div class="dining-copy">
+        <p class="eyebrow">UN PLAN PARA CADA MOMENTO</p>
+        <h2>Disfruta tu estadía a tu manera.</h2>
+        <p>Al reservar puedes elegir la opción de alimentación que mejor se adapte a tu viaje.</p>
+      </div>
+      <div class="meal-options">
+        <div><span>01</span><strong>Sin alimentación</strong></div>
+        <div><span>02</span><strong>Desayuno</strong></div>
+        <div><span>03</span><strong>Media pensión</strong></div>
+        <div><span>04</span><strong>Pensión completa</strong></div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">ANTES DE RESERVAR</p><h2>Preguntas frecuentes</h2></div>
+        <p>Información clara para que planees tu visita con tranquilidad.</p>
+      </div>
+      <div class="faq-list">
+        <details><summary>¿La reserva queda confirmada al enviarla?</summary><p>Al enviar el formulario, la solicitud queda pendiente de revisión. El hotel debe confirmarla; cuando lo haga, recibirás la confirmación en el correo que registraste.</p></details>
+        <details><summary>¿Cómo se calcula el precio de la estadía?</summary><p>El total considera la tarifa de la habitación por noche, el plan de alimentación elegido y la cantidad de huéspedes, multiplicados por el número de noches. El precio final se muestra antes de enviar la solicitud.</p></details>
+        <details><summary>¿Puedo consultar más de una fecha?</summary><p>Sí. Cambia las fechas y el número de huéspedes en el buscador para consultar nuevamente las habitaciones disponibles.</p></details>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+      <p class="eyebrow">ESTAMOS PARA AYUDARTE</p>
+      <h2>¿Listo para planear tu próxima visita?</h2>
+      <p>Consulta las fechas disponibles o escríbenos si tienes alguna pregunta.</p>
+      <div><a class="button button-contact" href="#reservar">Buscar habitación <span>→</span></a><a class="contact-email" href="mailto:hotelparaiso554@gmail.com">hotelparaiso554@gmail.com</a></div>
+    </section>
+
+    <footer class="site-footer"><a class="brand footer-brand" href="#inicio"><img class="brand-logo" src="/images/hotel-paraiso-logo.png" alt=""><span class="brand-wordmark">REAL<small>HOTEL BOUTIQUE</small></span></a><p>Un lugar para descansar, compartir y crear nuevos recuerdos.</p><div>© 2026 Hotel Paraíso Real <span>·</span> Todos los derechos reservados</div></footer>
+  </main>
+
+  <main id="login-screen" class="login-layout" hidden>
+    <section class="login-art" aria-label="Bienvenido al Hotel Paraíso Real">
+      <a class="brand brand-light" href="#inicio"><img class="brand-logo" src="/images/hotel-paraiso-logo.png" alt=""><span class="brand-wordmark">REAL<small>HOTEL BOUTIQUE</small></span></a>
+      <div class="login-message">
+        <p class="eyebrow">DESCANSO · CALIDEZ · EXPERIENCIAS</p>
+        <h1>Tu próxima<br>historia comienza aquí.</h1>
+        <p>Administra las habitaciones y reservas de nuestro hotel desde un solo lugar.</p>
+      </div>
+      <p class="image-credit">Hotel Paraíso Real · Panel de administración</p>
+    </section>
+    <section class="login-side">
+      <form id="login-form" class="login-card">
+        <button class="login-back" type="button" data-action="show-home">← Volver al sitio</button>
+        <span class="eyebrow">BIENVENIDO DE NUEVO</span>
+        <h2>Iniciar sesión</h2>
+        <p class="muted">Ingresa con la cuenta del administrador del hotel.</p>
+        <label for="login-email">Correo electrónico</label>
+        <input id="login-email" name="email" type="email" autocomplete="username" placeholder="admin@paraisoreal.com" required>
+        <label for="login-password">Contraseña</label>
+        <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Tu contraseña" required>
+        <button class="button button-primary button-full" type="submit">Entrar al panel <span aria-hidden="true">→</span></button>
+        <p id="login-error" class="error-message" role="alert"></p>
+        <p class="demo-hint">Acceso de demostración: <strong>admin@paraisoreal.com</strong><br>Contraseña: <strong>Hotel2026!</strong></p>
+      </form>
+    </section>
+  </main>
+
+  <div id="app-screen" class="app-layout" hidden>
+    <aside class="sidebar">
+      <div class="sidebar-main">
+        <a class="brand sidebar-brand" href="#" aria-label="Hotel Paraíso Real">
+          <img class="brand-logo" src="/images/hotel-paraiso-logo.png" alt="">
+          <span class="brand-wordmark">PARAÍSO REAL<small>GESTIÓN HOTELERA</small></span>
+        </a>
+        <div class="sidebar-navigation">
+          <p class="nav-caption">MENÚ PRINCIPAL</p>
+          <nav class="main-nav" aria-label="Menú principal">
+            <button class="nav-item active" data-view="dashboard"><span class="nav-icon">⌂</span> Resumen</button>
+            <button class="nav-item" data-view="reservations"><span class="nav-icon">▤</span> Reservas</button>
+            <button class="nav-item" data-view="rooms"><span class="nav-icon">▦</span> Habitaciones</button>
+          </nav>
+        </div>
+        <div class="help-card"><span class="help-icon">FLUJO DE RESERVAS</span><strong>Pendiente <span aria-hidden="true">→</span> Confirmada <span aria-hidden="true">→</span> Finalizada</strong><p>Confirma para notificar al huésped y finaliza la estadía al completar su visita.</p></div>
+      </div>
+      <div class="sidebar-bottom">
+        <button id="logout-button" class="logout-button"><span>↪</span> Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <section class="workspace">
+      <header class="topbar">
+        <div class="sender-summary"><p class="eyebrow">CORREO DE SALIDA</p><p id="sender-email" class="sender-email">Cargando remitente…</p></div>
+        <div class="topbar-right"><span id="today-label" class="today-label"></span><span class="email-status"><span class="email-status-dot"></span><span id="email-status-label">Estado del correo</span></span><span class="avatar"><img src="/images/hotel-paraiso-logo.png" alt="Hotel Paraíso Real"></span></div>
+      </header>
+      <div id="mail-warning" class="notice notice-warning" hidden>El correo no está configurado. Añade SMTP_HOST, SMTP_USER y SMTP_PASS en .env; las reservas no se podrán confirmar por correo hasta configurarlo.</div>
+      <div class="content">
+        <section id="view-dashboard" class="view-section">
+          <div class="page-heading"><div><p class="eyebrow">VISTA GENERAL</p><h1>Resumen del hotel</h1><p class="muted">Así va la operación de Paraíso Real.</p></div><button class="button button-primary" data-action="new-reservation"><span>＋</span> Nueva reserva</button></div>
+          <div id="dashboard-cards" class="stats-grid"></div>
+          <div class="panel dashboard-panel">
+            <div class="panel-heading"><div><h2>Reservas recientes</h2><p class="muted">Las últimas solicitudes registradas</p></div><button class="text-button" data-view="reservations">Ver todas <span>→</span></button></div>
+            <div id="recent-reservations"></div>
+          </div>
+        </section>
+
+        <section id="view-reservations" class="view-section" hidden>
+          <div class="page-heading"><div><p class="eyebrow">GESTIÓN</p><h1>Reservas</h1><p class="muted">Consulta y administra las estadías de tus huéspedes.</p></div><button class="button button-primary" data-action="new-reservation"><span>＋</span> Nueva reserva</button></div>
+          <div class="panel">
+            <div class="toolbar"><div class="search-wrap"><span>⌕</span><input id="reservation-search" type="search" placeholder="Buscar huésped, documento o habitación..." aria-label="Buscar reservas"></div><select id="reservation-filter" aria-label="Filtrar por estado"><option value="">Todos los estados</option><option>Pendiente</option><option>Confirmada</option><option>Cancelada</option><option>Finalizada</option></select></div>
+            <div id="reservations-table"></div>
+          </div>
+        </section>
+
+        <section id="view-rooms" class="view-section" hidden>
+          <div class="page-heading"><div><p class="eyebrow">ALOJAMIENTO</p><h1>Habitaciones</h1><p class="muted">Administra disponibilidad, capacidad y tarifas.</p></div><button class="button button-primary" data-action="new-room"><span>＋</span> Agregar habitación</button></div>
+          <div id="room-cards" class="rooms-grid"></div>
+        </section>
+      </div>
+      <footer class="footer">Hotel Paraíso Real <span>·</span> Sistema de gestión de reservas</footer>
+    </section>
+  </div>
+
+  <dialog id="room-details-dialog" class="room-details-dialog" aria-labelledby="room-details-title">
+    <div id="room-details-content"></div>
+  </dialog>
+
+  <dialog id="public-reservation-dialog" class="dialog">
+    <form id="public-reservation-form" class="dialog-form">
+      <div class="dialog-heading"><div><p class="eyebrow">HOTEL PARAÍSO REAL</p><h2>Solicitar habitación</h2></div><button class="icon-button" type="button" data-close="public-reservation-dialog" aria-label="Cerrar">×</button></div>
+      <p id="public-room-summary" class="muted"></p>
+      <div class="form-grid">
+        <label>Documento de identidad<input name="document" required autocomplete="off"></label>
+        <label>Teléfono<input name="phone" type="tel" required autocomplete="tel"></label>
+        <label>Nombre(s)<input name="first_name" required autocomplete="given-name"></label>
+        <label>Apellidos<input name="last_name" required autocomplete="family-name"></label>
+        <label class="form-span">Correo electrónico<input name="email" type="email" required autocomplete="email"></label>
+        <label class="form-span">Plan de alimentación<select name="meal_plan_id" required></select></label>
+      </div>
+      <div id="public-reservation-total" class="total-preview"></div>
+      <p id="public-reservation-error" class="error-message" role="alert"></p>
+      <div class="dialog-actions"><button class="button button-quiet" type="button" data-close="public-reservation-dialog">Seguir explorando</button><button class="button button-primary" type="submit">Enviar solicitud</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="reservation-dialog" class="dialog">
+    <form id="reservation-form" class="dialog-form">
+      <div class="dialog-heading"><div><p class="eyebrow">NUEVA ESTADÍA</p><h2>Registrar reserva</h2></div><button class="icon-button" type="button" data-close="reservation-dialog" aria-label="Cerrar">×</button></div>
+      <div class="form-section-title">Datos del huésped</div>
+      <div class="form-grid">
+        <label>Documento de identidad<input name="document" required autocomplete="off"></label>
+        <label>Teléfono<input name="phone" type="tel" required autocomplete="tel"></label>
+        <label>Nombre(s)<input name="first_name" required autocomplete="given-name"></label>
+        <label>Apellidos<input name="last_name" required autocomplete="family-name"></label>
+        <label class="form-span">Correo electrónico<input name="email" type="email" required autocomplete="email"></label>
+      </div>
+      <div class="form-section-title">Detalles de la estadía</div>
+      <div class="form-grid">
+        <label>Fecha de entrada<input name="check_in" type="date" required></label>
+        <label>Fecha de salida<input name="check_out" type="date" required></label>
+        <label>Habitación<select name="room_id" required></select></label>
+        <label>Número de personas<input name="people" type="number" min="1" value="1" required></label>
+        <label class="form-span">Plan de alimentación<select name="meal_plan_id" required></select></label>
+      </div>
+      <div id="reservation-total" class="total-preview">Selecciona fechas y habitación para calcular el total.</div>
+      <p id="reservation-error" class="error-message" role="alert"></p>
+      <div class="dialog-actions"><button class="button button-quiet" type="button" data-close="reservation-dialog">Cancelar</button><button class="button button-primary" type="submit">Guardar reserva</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="room-dialog" class="dialog">
+    <form id="room-form" class="dialog-form">
+      <div class="dialog-heading"><div><p class="eyebrow">ALOJAMIENTO</p><h2>Agregar habitación</h2></div><button class="icon-button" type="button" data-close="room-dialog" aria-label="Cerrar">×</button></div>
+      <div class="form-grid">
+        <label>Número<input name="number" required placeholder="Ej. 105"></label>
+        <label>Tipo<select name="type" required><option>Sencilla</option><option>Doble</option><option>Familiar</option><option>Suite</option></select></label>
+        <label>Capacidad (personas)<input name="capacity" type="number" min="1" value="2" required></label>
+        <label>Precio por noche (COP)<input name="price_per_night" type="number" min="0" step="1000" required placeholder="180000"></label>
+      </div>
+      <p id="room-error" class="error-message" role="alert"></p>
+      <div class="dialog-actions"><button class="button button-quiet" type="button" data-close="room-dialog">Cancelar</button><button class="button button-primary" type="submit">Guardar habitación</button></div>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
