@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hotel Paraíso Real
 
 Aplicación web para administrar huéspedes, habitaciones y reservas. La interfaz está en español y utiliza una base SQLite persistente en `data/hotel.sqlite`.
@@ -96,3 +97,7 @@ Las credenciales SMTP son secretos locales: no las compartas ni las subas al rep
 ## Límites de esta versión educativa
 
 La sesión usa el almacén en memoria predeterminado de `express-session`; al reiniciar el servidor, los usuarios deberán iniciar sesión de nuevo. El proyecto está preparado para ejecución local y demostración académica; antes de publicarlo se recomienda configurar HTTPS, un almacén persistente para sesiones, una cuenta SMTP de producción y la rotación de credenciales.
+=======
+# hotel-paraiso-real
+Aplicación web para gestionar habitaciones y reservas del Hotel Paraíso Real, con confirmaciones por correo.
+>>>>>>> 4d57f98193280fdcb073ea097fee7514bfb540fe
